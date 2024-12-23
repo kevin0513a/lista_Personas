@@ -37,10 +37,19 @@ const personas = [
 ];
 
 function mostrarPersonas() {
-    let texto = '';
+    let texto = "";
+
     for (let i = 0; i < personas.length; i++) {
+        const primeraLetra = personas[i].nombre.charAt(0).toUpperCase();
         console.log(personas[i]);
-        texto += `<li>${personas[i].nombre} ${personas[i].apellido} ${personas[i].tel}</li>`;
+        texto += `<tr>
+        <td>
+        <div class="icono">${primeraLetra}</div>
+        </td>
+        <td>${personas[i].nombre}</td>
+        <td>${personas[i].apellido}</td>
+        <td>${personas[i].tel}</td>
+        </tr>`;
     }
     document.getElementById('personas').innerHTML = texto;
 }
@@ -74,3 +83,13 @@ input2.setAttribute("autocomplete", "off");
 const input3 = document.getElementById('telefono');
 input3.setAttribute("autocomplete", "off");
 
+function getRandomColor() { 
+    return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`; 
+  }
+  
+  function assignRandomColors() {
+    const elements = document.querySelectorAll('.icono');
+    elements.forEach(el => {
+      el.style.backgroundColor = getRandomColor();
+    });
+  }

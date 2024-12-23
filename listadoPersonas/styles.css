@@ -159,13 +159,13 @@ body {
   background-color: white;
 }
 
-.container-button-add{
+.container-button-add {
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
 
-.button-add{
+.button-add {
   border: none;
   background-color: #9e95b9;
   padding: 10px;
@@ -173,31 +173,55 @@ body {
   border-radius: 5px;
 }
 
-.container-header-list{
+.container-header-list {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: red;
 }
 
-.header-list{
-  position: relative;
-  width: 90%;
-  display: flex;
-  margin-top: 20px;
-  font-weight: bold;
-}
 
-.header-list p:nth-child(2){
+
+.header-list p:nth-child(2) {
   margin-left: 10px;
 }
 
-.header-list p:nth-child(3){
+.header-list p:nth-child(3) {
   margin-left: 50px;
 }
 
-.header-list p:last-child{
+.header-list p:last-child {
   position: absolute;
   margin-right: 30px;
   right: 0;
 }
 
+.container-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+table {
+  width: 90%;
+  text-align: left;
+}
+
+tr{
+  border: 1px solid #d3cdd8;
+}
+
+th {
+  font-weight: bold;
+}
+
+.icono{
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

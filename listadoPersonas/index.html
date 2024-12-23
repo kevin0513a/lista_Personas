@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 
-<body onload="mostrarPersonas()">
+<body onload="mostrarPersonas(); assignRandomColors();">
     <div>
         <section class="container-listado">
             <div class="container-icon">
@@ -26,17 +26,23 @@
                 <p>Un listado de personas pendientes es un registro que reúne a quienes requieren atención o
                     seguimiento, garantizando que sus asuntos sean gestionados a tiempo y de manera efectiva.</p>
             </div>
-            <section class="container-header-list">
-                <div class="header-list">
-                    <p>Nombre</p>
-                    <p>Apellido</p>
-                    <p>Teléfono</p>
-                    <p>Acción</p>
-                </div>
-            </section>
-            <div class="container-personas">
-                <ul style="padding-left: 30px;" id="personas">
-                </ul>
+            <div class="container-table">
+                <table>
+                    <colgroup class="columns">
+                        <col style="width: 10%;">
+                        <col style="width: 30%;">
+                        <col style="width: 30%;">
+                        <col style="width: 30%;">
+                    </colgroup>
+                    <tr>
+                        <th></th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Teléfono</th>
+                    </tr>
+                    <tbody id="personas">
+                    </tbody>
+                </table>
             </div>
 
             <div class="container-button-desplegue">
@@ -59,7 +65,7 @@
                         </section>
                     </form>
                     <div class="container-button-add">
-                        <button class="button-add" onclick="agregarPersonas()">Agregar</button>
+                        <button class="button-add" onclick="agregarPersonas();assignRandomColors();">Agregar</button>
                     </div>
                 </div>
             </div>
